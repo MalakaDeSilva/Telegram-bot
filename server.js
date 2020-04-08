@@ -15,6 +15,7 @@ const env = {
 
 const tg = new Telegraf(env.BOT_TOKEN);
 const _tg = new Telegram(env.BOT_TOKEN);
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 app.use(bodyParser.json());
 
@@ -24,22 +25,29 @@ app.use(
   })
 );
 
-
 app.get("/", (req, res) => {
   res.send('GET request to the homepage')
 });
 
+async function _covidstat() {
+  const apiURL = "https://hpb.health.gov.lk/api/get-current-statistical";
+  const fetchResult = fetch(apiURL);
+  const response = await fetchResult;
+  const jsonData = await response.json();
+  return jsonData;
+}
+
 //bot commands
 tg.start((ctx) => ctx.reply("Hello... Let's start then."))
 tg.hears('hi', (ctx) => {
-  if(ctx.from.id == 1007382901){
+  if (ctx.from.id == 1007382901) {
     ctx.reply('My lord Murazor');
   } else {
     ctx.reply('Hello there');
   }
 })
 tg.hears('Hi', (ctx) => {
-  if(ctx.from.id == 1007382901){
+  if (ctx.from.id == 1007382901) {
     ctx.reply('My lord Murazor');
   } else {
     ctx.reply('Hello there');
@@ -56,14 +64,20 @@ tg.hears('Hi sexy', (ctx) => {
   ctx.replyWithMarkdown('ම්ම්ම්ම්ම්ම්ම්හ්හ්හ්හ්හ්... කොල්ලෝඕඕඕඔහ්හ්හ්හ්හ්හ්....');
 })
 
-var j = schedule.scheduleJob(date, function(){
+tg.hears('Covidstat', async (ctx) => {
+  _data = await _covidstat();
+  var _msg = "*CoViD19 Updates - Sri Lanka*\n\n" + "`Deaths`: " + _data.data.local_deaths + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
+  ctx.replyWithMarkdown(_msg);
+});
+
+var j = schedule.scheduleJob(date, function () {
   _tg.sendMessage(env.GROUP_ID, "9.30ට PPW Assignment එක... ලෑස්ති වෙයන්..");
 });
 
 tg.launch();
 
 // Finally, start our server
-app.listen(3000,  () => {
+app.listen(server_port, () => {
   console.log("Telegram app listening on port 3000!");
 
 });
