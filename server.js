@@ -6,7 +6,7 @@ const fetch = require("node-fetch");
 
 const Telegraf = require("telegraf");
 const Telegram = require("telegraf/telegram");
-var date = new Date("April 08, 2020 08:00:00");
+var date = new Date("April 08, 2020 08:45:00");
 
 const env = {
   GROUP_ID: -1001440768236,
