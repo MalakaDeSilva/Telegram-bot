@@ -1,12 +1,10 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
-var schedule = require("node-schedule");
 const fetch = require("node-fetch");
 
 const Telegraf = require("telegraf");
 const Telegram = require("telegraf/telegram");
-var date = new Date("April 08, 2020 08:45:00");
 
 const env = {
   GROUP_ID: -1001440768236,
@@ -70,9 +68,6 @@ tg.hears('Covidstat', async (ctx) => {
   ctx.replyWithMarkdown(_msg);
 });
 
-var j = schedule.scheduleJob(date, function () {
-  _tg.sendMessage(env.GROUP_ID, "9.30ට PPW Assignment එක... ලෑස්ති වෙයන්..");
-});
 
 tg.launch();
 
