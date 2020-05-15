@@ -62,15 +62,27 @@ tg.hears('Hi sexy', (ctx) => {
 })
 
 // covid-19 related commands
-tg.hears('covidstat', async (ctx) => {
+tg.hears('local stat', async (ctx) => {
   _data = await _covidstat();
   var _msg = "*CoViD19 Updates - Sri Lanka*\n\n" + "`Deaths`: " + _data.data.local_deaths + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
 
-tg.hears('Covidstat', async (ctx) => {
+tg.hears('Local stat', async (ctx) => {
   _data = await _covidstat();
   var _msg = "*CoViD19 Updates - Sri Lanka*\n\n" + "`Deaths`: " + _data.data.local_deaths + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
+  ctx.replyWithMarkdown(_msg);
+});
+
+tg.hears('global stat', async (ctx) => {
+  _data = await _covidstat();
+  var _msg = "*CoViD19 Updates - Global*\n\n" + "`Deaths`: " + _data.data.global_deaths + "\n`Recovered`: " + _data.data.global_recovered + "\n`New Cases`: " + _data.data.global_new_cases + "\n`Total Cases`: " + _data.data.global_total_cases;
+  ctx.replyWithMarkdown(_msg);
+});
+
+tg.hears('Global stat', async (ctx) => {
+  _data = await _covidstat();
+  var _msg = "*CoViD19 Updates - Global*\n\n" + "`Deaths`: " + _data.data.global_deaths + "\n`Recovered`: " + _data.data.global_recovered + "\n`New Cases`: " + _data.data.global_new_cases + "\n`Total Cases`: " + _data.data.global_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
 
