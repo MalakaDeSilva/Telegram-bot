@@ -37,7 +37,7 @@ async function _covidstat() {
 }
 
 // general bot commands
-tg.start((ctx) => ctx.replyWithMarkdown("Hey there...\n\n *Commands*\n`local stat/Local stat - ශ්‍රී ලංකාව තුල CoViD19 නවතම තත්වය දැනගැනීමට`\n`global stat/Global stat - ලෝකයේ CoViD19 නවතම තත්වය දැනගැනීමට`\n"))
+tg.start((ctx) => ctx.replyWithMarkdown("Hey there...\n\n*Commands*\n\n`local stat/Local stat - ශ්‍රී ලංකාව තුල CoViD19 නවතම තත්වය දැනගැනීමට`\n\n`global stat/Global stat - ලෝකයේ CoViD19 නවතම තත්වය දැනගැනීමට`\n"))
 
 tg.hears('hi', (ctx) => {
   if (ctx.from.id == env.CREATOR) {
