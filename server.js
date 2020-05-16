@@ -6,6 +6,13 @@ const fetch = require("node-fetch");
 const Telegraf = require("telegraf");
 const Telegram = require("telegraf/telegram");
 
+const PORT = process.env.PORT || 5001;
+
+app.use(cors());
+
+const http = require("http");
+const server = http.Server(app);
+
 const env = {
   GROUP_ID: -1001440768236,
   BOT_TOKEN: "1222653443:AAGWS9lrRn-vD4OZ5lg3eo_mBFVRwNV7Ucs",
@@ -14,7 +21,6 @@ const env = {
 
 const tg = new Telegraf(env.BOT_TOKEN);
 const _tg = new Telegram(env.BOT_TOKEN);
-var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 app.use(bodyParser.json());
 
@@ -92,7 +98,7 @@ tg.hears('Global stat', async (ctx) => {
 
 tg.launch();
 
-app.listen(server_port, () => {
-  console.log("Telegram app listening on port 3000!");
+server.listen(PORT, () => {
+  console.log("Telegram app listening on port "+ PORT);
 
 });
