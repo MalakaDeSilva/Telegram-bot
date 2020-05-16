@@ -5,6 +5,7 @@ const fetch = require("node-fetch");
 
 const Telegraf = require("telegraf");
 const Telegram = require("telegraf/telegram");
+const cors = require("cors");
 
 const PORT = process.env.PORT || 5001;
 
@@ -72,13 +73,13 @@ tg.hears('Hi sexy', (ctx) => {
 // local status commands
 tg.hears('local stat', async (ctx) => {
   _data = await _covidstat();
-  var _msg = "*CoViD19 Updates - Sri Lanka*\n\n"+"`Updated time` : "+ _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.local_deaths + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
+  var _msg = "*CoViD19 Updates - Sri Lanka*\n\n" + "`Updated time` : " + _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.local_deaths + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
 
 tg.hears('Local stat', async (ctx) => {
   _data = await _covidstat();
-  var _msg = "*CoViD19 Updates - Sri Lanka*\n\n"+"`Updated time` : "+ _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.local_deaths + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
+  var _msg = "*CoViD19 Updates - Sri Lanka*\n\n" + "`Updated time` : " + _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.local_deaths + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
 
@@ -86,19 +87,19 @@ tg.hears('Local stat', async (ctx) => {
 // global status
 tg.hears('global stat', async (ctx) => {
   _data = await _covidstat();
-  var _msg = "*CoViD19 Updates - Global*\n\n" +"`Updated time` : "+ _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.global_deaths + "\n`Recovered`: " + _data.data.global_recovered + "\n`New Cases`: " + _data.data.global_new_cases + "\n`Total Cases`: " + _data.data.global_total_cases;
+  var _msg = "*CoViD19 Updates - Global*\n\n" + "`Updated time` : " + _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.global_deaths + "\n`Recovered`: " + _data.data.global_recovered + "\n`New Cases`: " + _data.data.global_new_cases + "\n`Total Cases`: " + _data.data.global_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
 
 tg.hears('Global stat', async (ctx) => {
   _data = await _covidstat();
-  var _msg = "*CoViD19 Updates - Global*\n\n" +"`Updated time` : "+ _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.global_deaths + "\n`Recovered`: " + _data.data.global_recovered + "\n`New Cases`: " + _data.data.global_new_cases + "\n`Total Cases`: " + _data.data.global_total_cases;
+  var _msg = "*CoViD19 Updates - Global*\n\n" + "`Updated time` : " + _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.global_deaths + "\n`Recovered`: " + _data.data.global_recovered + "\n`New Cases`: " + _data.data.global_new_cases + "\n`Total Cases`: " + _data.data.global_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
 
 tg.launch();
 
 server.listen(PORT, () => {
-  console.log("Telegram app listening on port "+ PORT);
+  console.log("Telegram app listening on port " + PORT);
 
 });
