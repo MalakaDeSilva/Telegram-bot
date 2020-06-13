@@ -2,6 +2,9 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 const fetch = require("node-fetch");
+const Bundler = require('parcel-bundler');
+
+const bundler = new Bundler('./public/index.html');
 
 const Telegraf = require("telegraf");
 const Telegram = require("telegraf/telegram");
@@ -31,8 +34,12 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.send('GET request to the homepage')
+app.use(bundler.middleware());
+
+app.use(express.static('./dist'));
+
+app.get('/', (req, res) => {
+   res.sendFile('./dist/index.html');
 });
 
 async function _covidstat() {
