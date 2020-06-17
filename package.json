@@ -16,6 +16,8 @@
     "http": "0.0.1-security",
     "node-fetch": "^2.6.0",
     "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "telegraf": "^3.37.0"
   }
 }
