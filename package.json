@@ -15,6 +15,7 @@
     "express": "^4.17.1",
     "http": "0.0.1-security",
     "node-fetch": "^2.6.0",
+    "parcel-bundler": "^1.12.4",
     "telegraf": "^3.37.0"
   }
 }
