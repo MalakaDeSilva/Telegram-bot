@@ -28797,14 +28797,38 @@ var CardView = /*#__PURE__*/function (_Component) {
       }
 
       var data = this.state._data.data;
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_CardDeck.default, null, /*#__PURE__*/_react.default.createElement(_Card.default, {
+      return /*#__PURE__*/_react.default.createElement("div", {
+        className: "deck"
+      }, /*#__PURE__*/_react.default.createElement(_CardDeck.default, null, /*#__PURE__*/_react.default.createElement(_Card.default, {
         border: "dark",
         style: {
           width: '40rem'
         }
       }, /*#__PURE__*/_react.default.createElement(_Card.default.Header, {
         as: "h5"
-      }, "Global Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Global Updates")), /*#__PURE__*/_react.default.createElement(_Card.default.Footer, null, /*#__PURE__*/_react.default.createElement("small", {
+      }, "Global Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Global Updates"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-container"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "global-stat"
+      }, data.global_deaths), /*#__PURE__*/_react.default.createElement("p", null, "Deaths")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "global-stat"
+      }, data.global_new_deaths), /*#__PURE__*/_react.default.createElement("p", null, "New Deaths")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "global-stat"
+      }, data.global_recovered), /*#__PURE__*/_react.default.createElement("p", null, "Recovered")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "global-stat"
+      }, data.global_new_cases), /*#__PURE__*/_react.default.createElement("p", null, "New Cases"))), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "global-stat"
+      }, data.global_total_cases), /*#__PURE__*/_react.default.createElement("p", null, "Total Cases"))), /*#__PURE__*/_react.default.createElement(_Card.default.Footer, null, /*#__PURE__*/_react.default.createElement("small", {
         className: "text-muted"
       }, "Last updated: ", data.update_date_time))), /*#__PURE__*/_react.default.createElement(_Card.default, {
         bg: "dark",
@@ -28814,7 +28838,29 @@ var CardView = /*#__PURE__*/function (_Component) {
         }
       }, /*#__PURE__*/_react.default.createElement(_Card.default.Header, {
         as: "h5"
-      }, "Local Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Local Updates")), /*#__PURE__*/_react.default.createElement(_Card.default.Footer, null, /*#__PURE__*/_react.default.createElement("small", {
+      }, "Local Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Local Updates"), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "local-stat"
+      }, data.local_new_cases), /*#__PURE__*/_react.default.createElement("p", null, "New Cases")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-container"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "local-stat"
+      }, data.local_deaths), /*#__PURE__*/_react.default.createElement("p", null, "Deaths")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "local-stat"
+      }, data.local_active_cases), /*#__PURE__*/_react.default.createElement("p", null, "Active Cases")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "local-stat"
+      }, data.local_recovered), /*#__PURE__*/_react.default.createElement("p", null, "Recovered")), /*#__PURE__*/_react.default.createElement("div", {
+        className: "grid-item"
+      }, /*#__PURE__*/_react.default.createElement("p", {
+        className: "local-stat"
+      }, data.local_total_cases), /*#__PURE__*/_react.default.createElement("p", null, "Total Cases")))), /*#__PURE__*/_react.default.createElement(_Card.default.Footer, null, /*#__PURE__*/_react.default.createElement("small", {
         className: "text-muted"
       }, "Last updated: ", this.state._data.data.update_date_time)))));
     }
@@ -28825,7 +28871,9 @@ var CardView = /*#__PURE__*/function (_Component) {
 
 var _default = CardView;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","react-bootstrap/Card":"../node_modules/react-bootstrap/esm/Card.js","react-bootstrap/CardDeck":"../node_modules/react-bootstrap/esm/CardDeck.js"}],"index.jsx":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-bootstrap/Card":"../node_modules/react-bootstrap/esm/Card.js","react-bootstrap/CardDeck":"../node_modules/react-bootstrap/esm/CardDeck.js"}],"../images/telegram-logo.png":[function(require,module,exports) {
+module.exports = "/telegram-logo.58f03c68.png";
+},{}],"index.jsx":[function(require,module,exports) {
 'use strict';
 
 var _react = _interopRequireDefault(require("react"));
@@ -28834,16 +28882,27 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _CardView = _interopRequireDefault(require("./CardView"));
 
+var _telegramLogo = _interopRequireDefault(require("../images/telegram-logo.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Home() {
   return /*#__PURE__*/_react.default.createElement("div", {
     align: "center"
-  }, /*#__PURE__*/_react.default.createElement("h1", null, "CoViD-19 Bot"), /*#__PURE__*/_react.default.createElement(_CardView.default, null));
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "header-name"
+  }, "CoViD-19 Bot"), /*#__PURE__*/_react.default.createElement(_CardView.default, null), /*#__PURE__*/_react.default.createElement("p", {
+    id: "telegram-connect"
+  }, "To get the updates via Telegram, connect with the bot: ", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://t.me/rw9_bot"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _telegramLogo.default,
+    className: "telegram-logo"
+  }))));
 }
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Home, null), document.getElementById("root"));
-},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./CardView":"CardView.jsx"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./CardView":"CardView.jsx","../images/telegram-logo.png":"../images/telegram-logo.png"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28871,7 +28930,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12975" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2619" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
