@@ -1,9 +1,11 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-const fetch = require("node-fetch");
-const Bundler = require('parcel-bundler');
+'use strict'
 
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+const fetch = require("node-fetch");
+const Bundler = require("parcel-bundler");
+const morgan = require("morgan");
 const bundler = new Bundler('./public/index.html');
 
 const Telegraf = require("telegraf");
@@ -26,6 +28,7 @@ const env = {
 const tg = new Telegraf(env.BOT_TOKEN);
 const _tg = new Telegram(env.BOT_TOKEN);
 
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 app.use(
