@@ -2,11 +2,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CardView from './CardView';
+import TelegramLogo from '../images/telegram-logo.png';
 
 function Home() {
     return (
         <div align="center">
-            <h1 align="center">CoViD-19 Bot</h1>
+            <p className="header-name">CoViD-19 Bot</p>
+            <CardView />
+            <p id="telegram-connect">To get the updates via Telegram, connect with the bot: <a href="https://t.me/rw9_bot"><img src={TelegramLogo} className="telegram-logo"></img></a></p>
         </div>
     );
 }
