@@ -82,13 +82,13 @@ tg.hears('Hi sexy', (ctx) => {
 
 // local status commands
 tg.hears('local stat', async (ctx) => {
-  _data = await _covidstat();
+  const _data = await _covidstat();
   var _msg = "*CoViD19 Updates - Sri Lanka*\n\n" + "`Updated time` : " + _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.local_deaths + "\n`New Cases Today`: " + _data.data.local_new_cases + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
 
 tg.hears('Local stat', async (ctx) => {
-  _data = await _covidstat();
+  const _data = await _covidstat();
   var _msg = "*CoViD19 Updates - Sri Lanka*\n\n" + "`Updated time` : " + _data.data.update_date_time + "\n\n`Deaths`: " + _data.data.local_deaths + "\n`New Cases Today`: " + _data.data.local_new_cases + "\n`Active Cases`: " + _data.data.local_active_cases + "\n`Recovered`: " + _data.data.local_recovered + "\n`Individuals in hospitals`: " + _data.data.local_total_number_of_individuals_in_hospitals + "\n`Total Cases`: " + _data.data.local_total_cases;
   ctx.replyWithMarkdown(_msg);
 });
