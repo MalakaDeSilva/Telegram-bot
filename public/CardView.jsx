@@ -26,8 +26,10 @@ class CardView extends Component {
             return null;
         }
 
+        const data = this.state._data.data;
+
         return (
-            <div class="deck">
+            <div>
                 <CardDeck>
                     <Card border="dark" style={{ width: '40rem' }}>
                         <Card.Header as="h5">Global Updates</Card.Header>
@@ -37,7 +39,7 @@ class CardView extends Component {
                             
                         </Card.Body>
                         <Card.Footer>
-                            <small className="text-muted">Last updated: {this.state._data.data.update_date_time}</small>
+                            <small className="text-muted">Last updated: {data.update_date_time}</small>
                         </Card.Footer>
                     </Card>
 

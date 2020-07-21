@@ -28796,9 +28796,8 @@ var CardView = /*#__PURE__*/function (_Component) {
         return null;
       }
 
-      return /*#__PURE__*/_react.default.createElement("div", {
-        class: "deck"
-      }, /*#__PURE__*/_react.default.createElement(_CardDeck.default, null, /*#__PURE__*/_react.default.createElement(_Card.default, {
+      var data = this.state._data.data;
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_CardDeck.default, null, /*#__PURE__*/_react.default.createElement(_Card.default, {
         border: "dark",
         style: {
           width: '40rem'
@@ -28807,7 +28806,7 @@ var CardView = /*#__PURE__*/function (_Component) {
         as: "h5"
       }, "Global Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Global Updates")), /*#__PURE__*/_react.default.createElement(_Card.default.Footer, null, /*#__PURE__*/_react.default.createElement("small", {
         className: "text-muted"
-      }, "Last updated: ", this.state._data.data.update_date_time))), /*#__PURE__*/_react.default.createElement(_Card.default, {
+      }, "Last updated: ", data.update_date_time))), /*#__PURE__*/_react.default.createElement(_Card.default, {
         bg: "dark",
         text: "white",
         style: {
