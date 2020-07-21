@@ -28891,7 +28891,7 @@ function Home() {
     align: "center"
   }, /*#__PURE__*/_react.default.createElement("p", {
     className: "header-name"
-  }, "CoViD-19 Bot"), /*#__PURE__*/_react.default.createElement(_CardView.default, null), /*#__PURE__*/_react.default.createElement("p", {
+  }, "CoViD-19 Dashboard"), /*#__PURE__*/_react.default.createElement(_CardView.default, null), /*#__PURE__*/_react.default.createElement("p", {
     id: "telegram-connect"
   }, "To get the updates via Telegram, connect with the bot: ", /*#__PURE__*/_react.default.createElement("a", {
     href: "https://t.me/rw9_bot"
