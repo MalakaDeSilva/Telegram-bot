@@ -28803,7 +28803,8 @@ var CardView = /*#__PURE__*/function (_Component) {
         border: "dark",
         style: {
           width: '40rem'
-        }
+        },
+        id: "card"
       }, /*#__PURE__*/_react.default.createElement(_Card.default.Header, {
         as: "h5"
       }, "Global Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Global Updates"), /*#__PURE__*/_react.default.createElement("div", {
@@ -28835,7 +28836,8 @@ var CardView = /*#__PURE__*/function (_Component) {
         text: "white",
         style: {
           width: '40rem'
-        }
+        },
+        id: "card"
       }, /*#__PURE__*/_react.default.createElement(_Card.default.Header, {
         as: "h5"
       }, "Local Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Local Updates"), /*#__PURE__*/_react.default.createElement("div", {
@@ -28930,7 +28932,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4587" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10752" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
