@@ -31,7 +31,7 @@ class CardView extends Component {
         return (
             <div className="deck">
                 <CardDeck>
-                    <Card border="dark" style={{ width: '40rem' }}>
+                    <Card border="dark" style={{ width: '40rem' }} id="card"> 
                         <Card.Header as="h5">Global Updates</Card.Header>
                         <Card.Body>
                             <Card.Title>nCoV Global Updates</Card.Title>
@@ -63,7 +63,7 @@ class CardView extends Component {
                         </Card.Footer>
                     </Card>
 
-                    <Card bg="dark" text="white" style={{ width: '40rem' }} >
+                    <Card bg="dark" text="white" style={{ width: '40rem' }} id="card">
                         <Card.Header as="h5">Local Updates</Card.Header>
                         <Card.Body>
                             <Card.Title>nCoV Local Updates</Card.Title>
