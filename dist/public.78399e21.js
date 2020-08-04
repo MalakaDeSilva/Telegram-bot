@@ -28798,13 +28798,14 @@ var CardView = /*#__PURE__*/function (_Component) {
 
       var data = this.state._data.data;
       return /*#__PURE__*/_react.default.createElement("div", {
-        className: "deck"
-      }, /*#__PURE__*/_react.default.createElement(_CardDeck.default, null, /*#__PURE__*/_react.default.createElement(_Card.default, {
+        className: "container-fluid"
+      }, /*#__PURE__*/_react.default.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/_react.default.createElement(_Card.default, {
         border: "dark",
         style: {
-          width: '40rem'
-        },
-        id: "card"
+          width: '50rem'
+        }
       }, /*#__PURE__*/_react.default.createElement(_Card.default.Header, {
         as: "h5"
       }, "Global Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Global Updates"), /*#__PURE__*/_react.default.createElement("div", {
@@ -28835,9 +28836,8 @@ var CardView = /*#__PURE__*/function (_Component) {
         bg: "dark",
         text: "white",
         style: {
-          width: '40rem'
-        },
-        id: "card"
+          width: '50rem'
+        }
       }, /*#__PURE__*/_react.default.createElement(_Card.default.Header, {
         as: "h5"
       }, "Local Updates"), /*#__PURE__*/_react.default.createElement(_Card.default.Body, null, /*#__PURE__*/_react.default.createElement(_Card.default.Title, null, "nCoV Local Updates"), /*#__PURE__*/_react.default.createElement("div", {
@@ -28892,7 +28892,7 @@ function Home() {
   return /*#__PURE__*/_react.default.createElement("div", {
     align: "center"
   }, /*#__PURE__*/_react.default.createElement("p", {
-    className: "header-name"
+    className: "h1"
   }, "CoViD-19 Dashboard"), /*#__PURE__*/_react.default.createElement(_CardView.default, null), /*#__PURE__*/_react.default.createElement("p", {
     id: "telegram-connect"
   }, "To get the updates via Telegram, connect with the bot: ", /*#__PURE__*/_react.default.createElement("a", {
@@ -28932,7 +28932,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10752" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4529" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

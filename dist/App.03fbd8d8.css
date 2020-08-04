@@ -1,0 +1,44 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.grid-item {
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.local-stat {
+    font-size: 4vw;
+    margin-bottom: 0;
+}
+
+.global-stat {
+    font-size: 4vw;
+    margin-bottom: 0;
+}
+
+.header-name {
+    font-size: 20px;
+}
+
+#telegram-connect {
+    margin-top: 20px;
+    font-size: 110%;
+}
+
+.telegram-logo {
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+}
+
+.card{
+    margin: 0.5rem;
+}
+
+
+
+/*# sourceMappingURL=/App.03fbd8d8.css.map */
