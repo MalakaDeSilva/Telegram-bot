@@ -29,9 +29,9 @@ class CardView extends Component {
         const data = this.state._data.data;
 
         return (
-            <div className="deck">
-                <CardDeck>
-                    <Card border="dark" style={{ width: '40rem' }} id="card"> 
+            <div className="container-fluid">
+                <div className="row">
+                    <Card border="dark" style={{ width: '50rem' }}>
                         <Card.Header as="h5">Global Updates</Card.Header>
                         <Card.Body>
                             <Card.Title>nCoV Global Updates</Card.Title>
@@ -62,8 +62,7 @@ class CardView extends Component {
                             <small className="text-muted">Last updated: {data.update_date_time}</small>
                         </Card.Footer>
                     </Card>
-
-                    <Card bg="dark" text="white" style={{ width: '40rem' }} id="card">
+                    <Card bg="dark" text="white" style={{ width: '50rem' }} >
                         <Card.Header as="h5">Local Updates</Card.Header>
                         <Card.Body>
                             <Card.Title>nCoV Local Updates</Card.Title>
@@ -94,7 +93,7 @@ class CardView extends Component {
                             <small className="text-muted">Last updated: {this.state._data.data.update_date_time}</small>
                         </Card.Footer>
                     </Card>
-                </CardDeck>
+                </div>
             </div>
         );
     }
