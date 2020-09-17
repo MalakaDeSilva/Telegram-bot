@@ -36,7 +36,7 @@ app.use(
     extended: true
   })
 );
-
+// changed comment line
 app.use(bundler.middleware());
 
 app.use(express.static('./dist'));
