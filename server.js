@@ -72,12 +72,6 @@ tg.hears('Hi', (ctx) => {
   }
 })
 
-tg.hears('අලුත් එකෙක් ආවා', (ctx) => ctx.reply('කෝ කෝ කවුද කවුද?'))
-
-tg.hears('Hi sexy', (ctx) => {
-  ctx.replyWithMarkdown('ම්ම්ම්ම්ම්ම්ම්හ්හ්හ්හ්හ්... කොල්ලෝඕඕඕඔහ්හ්හ්හ්හ්හ්....');
-})
-
 // covid-19 related commands
 
 // local status commands
