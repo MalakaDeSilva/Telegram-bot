@@ -12,4 +12,3 @@ Bot home page can be accessed by [Home Page](https://covid-bot-lk.herokuapp.com/
 | ------------- |:-------------:|
 |![Alt Text](https://github.com/MalakaDeSilva/Telegram-bot/blob/master/test-images/Screenshot_20200515-142436_Telegram.png)|![](https://github.com/MalakaDeSilva/Telegram-bot/blob/master/test-images/Screenshot_20200515-142457_Telegram.png)|
 
-![Imgur](https://i.imgur.com/CEVmIAX.png)
