@@ -1,9 +1,4 @@
-const mongoose = require("mongoose");
 const User = require("../model/user");
-
-function saveMessage(ctx) {
-  console.log(ctx.message);
-}
 
 function saveSender(ctx) {
   const user = new User({
@@ -22,7 +17,8 @@ function saveSender(ctx) {
     .catch((err) => {});
 }
 
+function dailyUsage(ctx) {}
+
 module.exports = {
-  saveMessage,
   saveSender,
 };
