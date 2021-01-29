@@ -17,13 +17,10 @@ const messages = require("./extra/Constants");
 
 const PORT = process.env.PORT || 5001;
 
-mongoose.connect(
-  process.env.URI,
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 app.use(cors());
 

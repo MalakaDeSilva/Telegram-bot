@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
-import CardDeck from "react-bootstrap/CardDeck";
+import Chart from "./chart";
 
 class CardView extends Component {
   constructor(props) {
@@ -30,6 +30,7 @@ class CardView extends Component {
 
     return (
       <div className="container-fluid">
+        <Chart></Chart>
         <div className="row">
           <Card border="dark" className="col-sm-6">
             <Card.Header as="h5">Global Updates</Card.Header>
