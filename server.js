@@ -7,16 +7,12 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const Bundler = require("parcel-bundler");
 const morgan = require("morgan");
-const dotenv = require("dotenv");
-dotenv.config();
+
 const bundler = new Bundler("./public/index.html");
 
 const Telegraf = require("telegraf");
 const cors = require("cors");
 
-const op = require("./analytics/botdata");
-const messages = require("./config/Constants");
-const api = require("./api/api");
 const bot = require("./bot/bot");
 
 const PORT = process.env.PORT || 5001;
